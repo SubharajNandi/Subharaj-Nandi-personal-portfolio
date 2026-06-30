@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Subharaj Nandi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .page-head { padding: var(--space-5) 0 var(--space-3); }
+  .page-head h1 { font-size: clamp(2rem, 4vw, 2.8rem); }
+
+  .project-card {
+    border: 1px solid var(--border);
+    background: var(--bg-panel);
+    border-radius: var(--radius);
+    padding: var(--space-4);
+    margin-bottom: var(--space-3);
+    display: grid;
+    grid-template-columns: 90px 1fr auto;
+    gap: var(--space-3);
+    align-items: start;
+    transition: border-color 0.2s;
+  }
+  .project-card:hover { border-color: var(--accent-dim); }
+
+  .project-index {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+    padding-top: 0.3em;
+  }
+  .project-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    margin-bottom: 0.4em;
+  }
+  .project-desc {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-2);
+    font-size: 0.98rem;
+  }
+  .project-tags { display: flex; gap: 0.5em; flex-wrap: wrap; margin-bottom: var(--space-2); }
+  .project-links { display: flex; gap: var(--space-2); }
+  .project-links a {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-bright);
+    padding: 0.4em 0.9em;
+    border-radius: var(--radius);
+    transition: color 0.2s, border-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+  }
+  .project-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+  .project-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.6em;
+  }
+  .status-pill {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    background: var(--accent-glow);
+    border: 1px solid var(--accent-dim);
+    padding: 0.3em 0.8em;
+    border-radius: 100px;
+  }
+
+  @media (max-width: 700px) {
+    .project-card { grid-template-columns: 1fr; }
+    .project-aside { align-items: flex-start; }
+    .project-index { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">~/<span class="path-current">projects</span></a>
+    <nav class="nav-links">
+      <a href="index.html">home</a>
+      <a href="about.html">about</a>
+      <a href="projects.html" class="active">projects</a>
+      <a href="experience.html">experience</a>
+      <a href="contact.html">contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="page-head container">
+    <span class="eyebrow">// projects</span>
+    <h1>Things I've built</h1>
+    <p class="text-secondary" style="max-width:560px; margin-top: 0.8em;">A selection of full-stack applications — each one an exercise in solving a real problem end-to-end, from data layer to UI.</p>
+  </section>
+
+  <section class="container">
+    <div class="project-card reveal">
+      <div class="project-index">01</div>
+      <div>
+        <div class="project-title">Taskr</div>
+        <p class="project-desc">A full-stack task management application built to help users organize, prioritize, and track their work — designed with a clean, distraction-free interface.</p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/SubharajNandi/Task-Management-Application.git" target="_blank" rel="noopener">↗ View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-aside">
+        <span class="status-pill">MERN Stack</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-index">02</div>
+      <div>
+        <div class="project-title">Bazaarall</div>
+        <p class="project-desc">An e-commerce application covering product browsing, cart management, and checkout — a complete shopping flow built on the MERN stack.</p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/SubharajNandi/E-Commerce-Application---Bazaarall.git" target="_blank" rel="noopener">↗ View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-aside">
+        <span class="status-pill">MERN Stack</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal">
+      <div class="project-index">03</div>
+      <div>
+        <div class="project-title">InkSphere</div>
+        <p class="project-desc">A blogging platform that lets writers create, edit, and publish posts with a smooth, modern reading and writing experience.</p>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">MongoDB</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/SubharajNandi/InkSphere-Blogging-Platform.git" target="_blank" rel="noopener">↗ View on GitHub</a>
+        </div>
+      </div>
+      <div class="project-aside">
+        <span class="status-pill">MERN Stack</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="cta-band reveal" style="border:1px solid var(--border); border-radius:var(--radius); background:linear-gradient(135deg, var(--bg-panel), var(--bg-panel-raised)); padding: var(--space-5); text-align:center;">
+      <span class="eyebrow" style="justify-content:center;">// more on github</span>
+      <h2 style="font-size:1.5rem; margin-bottom: var(--space-2);">Want to see the code in detail?</h2>
+      <p class="text-secondary" style="margin-bottom: var(--space-3);">All projects are open-source and documented on my GitHub profile.</p>
+      <a href="https://github.com/SubharajNand" target="_blank" rel="noopener" class="btn btn-primary">Visit GitHub →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Subharaj Nandi. Built with care.</span>
+    <div class="footer-socials">
+      <a href="https://github.com/SubharajNand" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/subharaj-nandi" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:subharajnandi2005@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
